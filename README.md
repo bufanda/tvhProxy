@@ -1,6 +1,4 @@
-tvhProxy
-========
-
+# tvhProxy
 A small flask app to proxy requests between Plex Media Server and Tvheadend.
 
 #### tvhProxy configuration
@@ -20,3 +18,10 @@ A startup script for Ubuntu can be found in tvhProxy.service (change paths in tv
 
 #### Plex configuration
 Enter the IP of the host running tvhProxy including port 5004, eg.: ```192.168.1.50:5004```
+
+#### How to run tvhProxyControl
+The full instructions of how to run this python script is not available yet. For now it is recommend to run
+it with docker and set the following environment variables:
+* *TVHPROXY_IP_ADDRESS* - the IP address of the tvhProxy, you can run with --net=host option if port 80 and 5004, 65001 is available on the host or create a macvlan docker network and give the container its own IP.
+* *TVHPROXY_TVHEADEND_URL* - the full url to tvheadend for example
+* *TVHPROXY_IGNORE_IP_ADDRESSES* - the IP address of Tvheadend, Tvheadend crashes when it discovers the tvhProxy via udp.

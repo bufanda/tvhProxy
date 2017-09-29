@@ -1,0 +1,2 @@
+#!/usr/bin/with-contenv sh
+/usr/local/bin/python /opt/tvhProxy/tvhProxy.py --port 80 --verbose ${HE_HTTP_VERBOSE:-'0'}

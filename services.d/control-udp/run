@@ -1,0 +1,2 @@
+#!/usr/bin/with-contenv sh
+/usr/local/bin/python /opt/tvhProxy/tvhProxyControl.py --port_type udp --verbose ${HE_HTTP_VERBOSE:-'0'}

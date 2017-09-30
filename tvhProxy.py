@@ -21,7 +21,7 @@ config = {
     'deviceId':            str(os.getenv('TVHPROXY_DEVICE_ID',              '12345678')),
     'deviceAuth':          str(os.getenv('TVHPROXY_DEVICE_AUTH',            'test1234')),
     'tvheadendUrl':        str(os.getenv('TVHPROXY_TVHEADEND_URL',          'http://127.0.0.1:9981')),
-    'directStream':        str(os.getenv('TVHPROXY_DIRECT_STREAM',          'NO')).upper(),
+    'directStream':        str(os.getenv('TVHPROXY_DIRECT_STREAM',          'YES')).upper(),
     'streamProfile':       str(os.getenv('TVHPROXY_TVHEADEND_PROFILE',      'pass')),       # specifiy a stream profile that you want to use for adhoc transcoding in tvh, e.g. mp4
     'tunerCount':          int(os.getenv('TVHPROXY_TUNER_COUNT',            4)),            # number of tuners in tvheadend
     'subscriptionWeight':  int(os.getenv('TVHPROXY_SUBSCRIPTION_WEIGHT',    300)),          # subscription priority

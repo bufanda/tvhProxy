@@ -1,4 +1,4 @@
-FROM        python:2-alpine as base
+FROM        python:3-alpine as base
 
 ENV         HE_HTTP_VERBOSE=0
 

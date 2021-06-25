@@ -23,11 +23,11 @@ jobs:
       - checkout
       - run: pip install flake8
       - run: flake8
+      
 workflows:
   version: 2
   scripts:
     jobs:
-    - shellcheck/check
     - flake8_lint
     -   docker/hadolint:
           dockerfiles: ./Dockerfile

@@ -71,14 +71,16 @@ crc32c_table = (
     0xb40bbe37, 0xc30c8ea1, 0x5a05df1b, 0x2d02ef8d,
 )
 
+
 def add(crc, buf):
     buf = array.array('B', buf)
     for b in buf:
         crc = (crc >> 8) ^ crc32c_table[(crc ^ b) & 0xff]
     return crc
 
+
 def done(crc):
-    tmp = ~crc & 0xffffffffL
+    tmp = ~crc & 0xffffffff
     b0 = tmp & 0xff
     b1 = (tmp >> 8) & 0xff
     b2 = (tmp >> 16) & 0xff
@@ -86,6 +88,7 @@ def done(crc):
     crc = (b0 << 24) | (b1 << 16) | (b2 << 8) | b3
     return crc
 
+
 def cksum(buf):
     """Return computed CRC-32c checksum."""
-    return done(add(0xffffffffL, buf))
+    return done(add(0xffffffff, buf))

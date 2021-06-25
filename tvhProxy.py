@@ -2,13 +2,14 @@ from gevent import monkey
 
 monkey.patch_all()
 
-import argparse
-import time
-import os
-import requests
-from gevent.pywsgi import WSGIServer
-from flask import Flask, Response, request, jsonify, abort, render_template
-from operator import itemgetter
+import argparse  # noqa: E402
+import time  # noqa: E402
+import os  # noqa: E402
+import requests  # noqa: E402
+from gevent.pywsgi import WSGIServer  # noqa: E402
+from flask import Flask, Response, request, \
+    jsonify, abort, render_template  # noqa: E402
+from operator import itemgetter  # noqa: E402
 
 app = Flask(__name__)
 

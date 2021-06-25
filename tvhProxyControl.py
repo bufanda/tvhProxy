@@ -1,4 +1,4 @@
-import StringIO
+from io import StringIO
 import argparse
 import os
 import socket

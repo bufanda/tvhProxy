@@ -1,4 +1,7 @@
 from gevent import monkey
+
+monkey.patch_all()
+
 import argparse
 import time
 import os
@@ -6,8 +9,6 @@ import requests
 from gevent.pywsgi import WSGIServer
 from flask import Flask, Response, request, jsonify, abort, render_template
 from operator import itemgetter
-
-monkey.patch_all()
 
 app = Flask(__name__)
 
